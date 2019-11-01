@@ -39,7 +39,7 @@ while i < le:
     jsonx += '"CBU_RATE": "' + dataa[i]['Rate'] + '",'
     jsonx += '"CBU_STATUS": 1  }}'
 
-    answer = requests.post(urlsite, data=json.dumps(json.loads(jsonx)),auth=(user, password))
+    answer = requests.post(urlsite, data=json.dumps(json.loads(jsonx)),auth=(user, password),verify=False)
     print(answer.text)
     i += 1
 
